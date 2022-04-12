@@ -35,13 +35,16 @@ public class Person {
     }
 
     public void setGender(char gender) {
-        if( !( gender=='M'||gender=='F')  ){
+        if(gender=='M'||gender=='F'){
+            this.gender = gender;
+        }
+        else if(gender=='m'||gender=='f'){
+            this.gender=gender;
+        }else{
             System.err.println("Invalid gender");
             System.exit(1);
-        }else if( !( gender=='m'||gender=='f')){
-            System.err.println("Invalid gender");
         }
-        this.gender = gender;
+
     }
 
     public Person(String name, int age, char gender) {
