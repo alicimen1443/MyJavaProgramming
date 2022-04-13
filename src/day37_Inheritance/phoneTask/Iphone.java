@@ -1,6 +1,6 @@
 package day37_Inheritance.phoneTask;
 
-public class Iphone extends Phone {
+public final class Iphone extends Phone {
 
     public Iphone(String model, String size, int price, String color) {
         super("Apple", model, size, price, color);
