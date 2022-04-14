@@ -1,38 +1,35 @@
 package day39_Recap.animalTask;
 
-public class FriendlyAnimal {
+import day40_FinalKeyword.Animal;
+
+public class FriendlyAnimal extends Animal {
+
+    public FriendlyAnimal(String name, String breed, char gender, String color, String size, int age) {
+        super(name, breed, gender, color, size, age);
+    }
+
+    private static boolean isWild =false;
+    private static boolean isFriendly = true;
+    private static boolean isPlayable = true;
 
 
-
-    private boolean isWild;
-    private boolean isFriendly;
-    private boolean isPlayable;
-
-    public boolean isWild() {
+    public static boolean isIsWild() {
         return isWild;
     }
 
-    public void setWild(boolean wild) {
-        if( !(wild==true||wild==false )){
-            System.err.println("Invalid data");
-            System.exit(1);
-        }
-        isWild = wild;
-    }
-
-    public boolean isFriendly() {
+    public static boolean isIsFriendly() {
         return isFriendly;
     }
 
-    public void setFriendly(boolean friendly) {
-        isFriendly = friendly;
-    }
-
-    public boolean isPlayable() {
+    public static boolean isIsPlayable() {
         return isPlayable;
     }
 
-    public void setPlayable(boolean playable) {
-        isPlayable = playable;
+    public void play(){
+        System.out.println(getName()+" is playing");
+    }
+
+    public void pet(){
+        System.out.println(getName()+" is a pet animal");
     }
 }
