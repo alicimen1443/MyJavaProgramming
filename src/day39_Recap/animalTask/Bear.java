@@ -14,4 +14,5 @@ public class Bear extends WildAnimal{
     public void hibernate(){
         System.out.println(getName()+" is sleeping in the winter");
     }
+
 }

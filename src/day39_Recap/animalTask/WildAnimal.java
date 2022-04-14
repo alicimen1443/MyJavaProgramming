@@ -6,9 +6,9 @@ public class WildAnimal extends Animal {
         super(name, breed, gender, age, size, color);
     }
 
-    private static boolean isWild=true;
-    private static boolean isFriendly=false;
-    private static boolean isPlayable = false;
+    private final static boolean isWild=true;
+    private final static boolean isFriendly=false;
+    private final static boolean isPlayable = false;
 
     public static boolean isIsWild() {
         return isWild;

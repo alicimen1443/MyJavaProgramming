@@ -2,8 +2,8 @@ package day39_Recap.animalTask;
 
 public class Cat extends FriendlyAnimal {
 
-    public Cat(String name, String breed, char gender, String color, String size, int age) {
-        super(name, breed, gender, color, size, age);
+    public Cat(String name, String breed, char gender, int age, String size, String color) {
+        super(name, breed, gender, age, size, color);
     }
 
     public void scratch(){
@@ -18,6 +18,8 @@ public class Cat extends FriendlyAnimal {
     public void eat() {
         System.out.println(getName()+" is eating cat food");
     }
+
+
 
 
 

@@ -1,16 +1,14 @@
 package day39_Recap.animalTask;
 
-import day40_FinalKeyword.Animal;
-
 public class FriendlyAnimal extends Animal {
 
-    public FriendlyAnimal(String name, String breed, char gender, String color, String size, int age) {
-        super(name, breed, gender, color, size, age);
+    public FriendlyAnimal(String name, String breed, char gender, int age, String size, String color) {
+        super(name, breed, gender, age, size, color);
     }
 
-    private static boolean isWild =false;
-    private static boolean isFriendly = true;
-    private static boolean isPlayable = true;
+    private final static boolean isWild =false;
+    private final static boolean isFriendly = true;
+    private final static boolean isPlayable = true;
 
 
     public static boolean isIsWild() {
