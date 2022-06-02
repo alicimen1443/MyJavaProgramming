@@ -74,6 +74,17 @@ public class StreamPractice {
 
 
         List<Integer> list6 = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9,10));
+        //allMatch() method what it does is, it takes one condition and checks all the elements matching with that condition
+        // anyMatch() method, it checks the condition with the elements if there is any matching
+        //nonMatch() method, if i want to verify that if the Array or Collection does not contain the specific elements that are matching with specific condition
+
+        boolean r1 = list6.stream().allMatch(p->p%2==0);
+        boolean r2 = list6.stream().anyMatch(p->p>20);
+        boolean r3 = list6.stream().noneMatch(p->p%3==0);
+
+        System.out.println(r1);
+        System.out.println(r2);
+        System.out.println(r3);
 
 
 
