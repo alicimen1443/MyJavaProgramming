@@ -3,6 +3,7 @@ package day53_FunctionalInterface;
 import javax.print.attribute.IntegerSyntax;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -108,12 +109,67 @@ public class BuildInFunctionalInterfaces1 {
         System.out.println("---------------------------------------");
 
         // create a function that can return the maximum number from an int array
+        Function<int[],Integer> maxNumberOfArray = (a)->{
+
+            int max=Integer.MIN_VALUE;
+
+            for (int each : a) {
+                if(each>max){
+                    max=each;
+                }
+            }
+            return max;
+        };
+        int[] arr1 ={1,2,3,4,5,6,7,8,9,10};
+
+        int max= maxNumberOfArray.apply(arr1);
+        System.out.println(max);
 
         // create a function that can swap the first and last elements of an array
+        Function<int[],int[] > swapFirstAndLastElements = (a)->{
+            int temp = a[a.length-1];
+            a[a.length-1]=a[0];
+            a[0]=temp;
+
+            return a;
+        };
+
+        int[] array = {27, 28, 30, 32, 35, 40, 45, 52};
+        array = swapFirstAndLastElements.apply(array);
+        System.out.println(Arrays.toString(array));
+
 
         // Create a function that can reverse an array and returns it
+        Function<String[],String[] > reverseArray = (n)->{
+            String[] ar = new String[n.length];
+            int k =0;
+            for (int i = n.length-1; i >=0; i--) {
+                ar[k++]=n[i];
+            }
+            return ar;
+        };
+
+        String[] ar = {"a","b","c","d","e","f"};
+        ar=reverseArray.apply(ar);
+        System.out.println(Arrays.toString(ar));
 
         // create a function that can reverse a List
+
+        Function<List<Integer>,List<Integer> > reverseList = (n)->{
+            List<Integer> list1 = new ArrayList<>();
+
+            for (int i = n.size()-1; i >=0; i--) {
+                list1.add(n.get(i));
+            }
+            return list1;
+        };
+        List<Integer> list3=new ArrayList<>(Arrays.asList(10,12,14,16,18,20));
+
+        list3=reverseList.apply(list3);
+        System.out.println(list3);
+
+
+
 
 
 
