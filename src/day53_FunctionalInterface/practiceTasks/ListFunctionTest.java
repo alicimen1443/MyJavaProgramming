@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class ListFunctionTest1 {
+public class ListFunctionTest {
     public static void main(String[] args) {
 
         //1.1 Create a function that can return the maximum number from a List of Integer
